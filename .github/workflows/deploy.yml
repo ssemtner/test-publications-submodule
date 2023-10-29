@@ -1,0 +1,16 @@
+name: Build Sites
+on:
+  push:
+    branches:
+      - main
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.PAT }}
+          repository: ssemtner/ssemtner.github.io
+          event-type: dispatch-build
+          client-payload: '{}'

@@ -5,12 +5,15 @@ on:
       - main
 jobs:
   dispatch:
+    strategy:
+      matrix:
+        repo: ['dineshb-ucsd/dineshb.github.io', 'ucsdwcsng/ucsdwcsng.github.io']
     runs-on: ubuntu-latest
     steps:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.PAT }}
-          repository: ssemtner/ssemtner.github.io
+          repository: ${{ matrix.repo }}
           event-type: dispatch-build
           client-payload: '{}'

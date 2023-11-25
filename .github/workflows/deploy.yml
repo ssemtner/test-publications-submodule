@@ -5,16 +5,20 @@ on:
       - main
 jobs:
   dispatch:
-    strategy:
-      matrix:
-        repo: ['dineshb-ucsd/dineshb.github.io', 'ucsdwcsng/ucsdwcsng.github.io']
-        pat: ['${{ secrets.DINESHB_PAT }}', '${{ secrets.WCSNG_PAT }}']
     runs-on: ubuntu-latest
     steps:
-      - name: Repository Dispatch
+      - name: Repository Dispatch WCSNG
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ matrix.pat }}
-          repository: ${{ matrix.repo }}
+          token: ${{ secrets.WCSNG_PAT }}
+          repository: 'ucsdwcsng/ucsdwcsng.github.io'
           event-type: dispatch-build
           client-payload: '{}'
+      - name: Repository Dispatch DINESHB
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.DINESHB_PAT }}
+          repository: 'dineshb-ucsd/dineshb.github.io'
+          event-type: dispatch-build
+          client-payload: '{}'
+

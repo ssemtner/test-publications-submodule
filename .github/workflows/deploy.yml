@@ -21,4 +21,3 @@ jobs:
           repository: 'dineshb-ucsd/dineshb.github.io'
           event-type: dispatch-build
           client-payload: '{}'
-

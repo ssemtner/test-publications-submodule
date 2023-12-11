@@ -32,7 +32,7 @@ video: https://www.youtube.com/embed/arSO7shzFT4?si=hygEYTRO50bvhs0b
 video_str: 30 sec. teaser
 miscs:  # whatever you need to add Extra
     - content_type: Ubicomp Talk
-      content_url: https://www.youtube.com/watch?v=arSO7shzFT4 # hat tip: do not use tabs for idnentation, yaml doesnt support it
+      content_url: https://www.youtube.com/embed/0ezsSe8hJb8 # hat tip: do not use tabs for idnentation, yaml doesnt support it
     - content_type: Medium Blog
       content_url: https://medium.com/ubicomp-iswc-2023/forcesticker-wireless-batteryless-thin-flexible-force-sensors-796294399c91
 description: # all combinations are possible: (title+text+image, title+image, text+image etc), things will be populated in orders
@@ -83,6 +83,5 @@ citation:
       - type: Slides
         url: /files/forcesticker_slides.pdf
 ---
-
 
 

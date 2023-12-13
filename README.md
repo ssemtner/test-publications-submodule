@@ -5,6 +5,7 @@
 * ```title```: paper/project title **"Required"**
 * ```short_title```: one word short decription **"Required"**
 * ```tags```: what publication catgeory does the project belong to (Backscatter/Wireless Sensign etc, check publication webpage) **"Required"**
+* ```cover```: cover image to display iff there is no video. If there is video, the main display will have the video instead.
 * ```authors```: string list of all authors, this is needed for publist.html where a short string describes authors. **"Required"**
 * ```author_list```: a nested YAML variable to help render the new template **Not Required, but recommended**
   - ```name```: needed, include a ```*``` if need to show equal contribution

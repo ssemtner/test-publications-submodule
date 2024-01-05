@@ -5,7 +5,6 @@ on:
       - main
 jobs:
   dispatch:
-    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
       - name: Repository Dispatch WCSNG
@@ -13,12 +12,12 @@ jobs:
         with:
           token: ${{ secrets.WCSNG_PAT }}
           repository: 'ucsdwcsng/ucsdwcsng.github.io'
-          event-type: dispatch-build
-          client-payload: '{}'
+          event-type: update
+          client-payload: '{"sha": "${{ github.sha }}"}'
       - name: Repository Dispatch DINESHB
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.DINESHB_PAT }}
           repository: 'dineshb-ucsd/dineshb.github.io'
-          event-type: dispatch-build
-          client-payload: '{}'
+          event-type: update
+          client-payload: '{"sha": "${{ github.sha }}"}'

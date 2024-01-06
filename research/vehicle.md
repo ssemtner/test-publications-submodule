@@ -1,12 +1,14 @@
 ---
 layout: research
+aside:
+  news: true
 permalink: vehicle
 heading: Autonomous Sensing and Systems
 pubtag: Vehicle
 carousels:
   - images:
     - image: /data/images/vehicle.png
-people: 
+people:
   - Manideep Dunna
   - Kshitiz Bansal
   - Dinesh Bharadia
